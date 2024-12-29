@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define MAX_BOOKS 10
+#define MAX_BOOKS 100
 
 // Structure to store book details
 struct Book {

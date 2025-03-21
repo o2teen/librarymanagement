@@ -22,9 +22,9 @@ void addBook() {
     }
 
     printf("Enter the book title: ");
-    getchar(); // Clear the newline character from input buffer
+    getchar(); 
     fgets(library[bookCount].title, sizeof(library[bookCount].title), stdin);
-    strtok(library[bookCount].title, "\n"); // Remove trailing newline
+    strtok(library[bookCount].title, "\n"); 
 
     printf("Enter the author's name: ");
     fgets(library[bookCount].author, sizeof(library[bookCount].author), stdin);
@@ -54,9 +54,9 @@ void displayBooks() {
 void searchBook() {
     char searchTitle[50];
     printf("Enter the title of the book to search: ");
-    getchar(); // Clear the newline character
+    getchar();
     fgets(searchTitle, sizeof(searchTitle), stdin);
-    strtok(searchTitle, "\n"); // Remove trailing newline
+    strtok(searchTitle, "\n"); 
 
     for (int i = 0; i < bookCount; i++) {
         if (strcmp(library[i].title, searchTitle) == 0) {
@@ -68,7 +68,6 @@ void searchBook() {
     printf("Book not found.\n");
 }
 
-// Main function
 int main() {
     int choice;
 
